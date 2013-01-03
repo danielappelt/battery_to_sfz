@@ -6,20 +6,23 @@ battery_to_sfz allows the conversion of [Native Instruments Battery][1] v1 (.kit
 Requirements
 ------------
 
-An [XSLT processor][3] like xsltproc (part of [libxslt][4]) is required to run the conversion script.
+A [XSLT processor][3] like xsltproc (part of [libxslt][4]) is required to run the conversion script.
 
 Usage
 -----
 
-* Batch conversion using bash script
+Batch conversion using bash script:
 
-	cd src/bash
-	./battery_to_sfz <path to folder containing .kit file(s)>
+    cd src/bash
+    ./battery_to_sfz <path to folder containing .kit file(s)>
 
-* Individual conversion using xsltproc (stringparams are optional)
 
-	cd src/xsl
-	xsltproc --noout -o <output .sfz file> --stringparam uppercaseFileNames <yes|no> --stringparam pathPrefix <path to samples relative to the generated sfz file> --stringparam maxEGTime <seconds> battery_to_sfz.xsl <battery .kit file>
+Individual conversion using xsltproc (stringparams are optional):
+
+    cd src/xsl
+    xsltproc --noout -o <output .sfz file> --stringparam uppercaseFileNames <yes|no>
+        --stringparam pathPrefix <path to samples relative to the generated sfz file>
+        --stringparam maxEGTime <seconds> battery_to_sfz.xsl <battery .kit file>
 
 Features
 --------
@@ -31,9 +34,9 @@ Features
 License
 -------
 
-See the [LICENSE][LICENSE] file.
+See the [LICENSE](LICENSE) file.
 
-[1]: http://www.native-instruments.com/en/products/producer/battery-3/	"Battery"
-[2]: http://www.cakewalk.com/DevXchange/article.aspx?aid=108	"sfz format"
-[3]: http://en.wikipedia.org/wiki/XSLT#Processor_implementations	"XSLT processor"
-[4]: http://xmlsoft.org/XSLT/	"libxslt"
+[1]: http://www.native-instruments.com/en/products/producer/battery-3/
+[2]: http://www.cakewalk.com/DevXchange/article.aspx?aid=108
+[3]: http://en.wikipedia.org/wiki/XSLT#Processor_implementations
+[4]: http://xmlsoft.org/XSLT/
