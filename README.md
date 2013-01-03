@@ -34,7 +34,7 @@ Features
 License
 -------
 
-See the [LICENSE](LICENSE) file.
+See the LICENSE file.
 
 [1]: http://www.native-instruments.com/en/products/producer/battery-3/
 [2]: http://www.cakewalk.com/DevXchange/article.aspx?aid=108
