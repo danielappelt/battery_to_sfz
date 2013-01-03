@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for f in "$1"/*.kit; do
+
+	pathPrefix="`basename "$f" .kit` samples/"
+	echo "Processing '$f'..."
+	
+	xsltproc --noout -o "${f/.kit/.sfz}" --stringparam uppercaseFileNames "$2" --stringparam pathPrefix "$pathPrefix" ../xsl/battery_to_sfz.xsl "$f"
+
+done

@@ -1,0 +1,26 @@
+// Dies ist ein temporäres Makro. Überprüfen Sie zuerst alle Kommandos,
+// um sicher zu gehen, dass die beabsichtigten Aktionen ausgeführt werden.
+// Um das Makro zu starten, aktivieren Sie die Datei,
+// in der das Makro arbeiten soll und drücken C+m C+p.
+int value = 100;
+double log;
+
+textArea.setSelectedText("<xsl:choose>");
+textArea.insertEnterAndIndent();
+
+for(int i=0; i < 100; i++) {
+	log = 10 * Math.log(value / 100d) / Math.log(10);
+	value -= 1;
+	
+	textArea.setSelectedText("<xsl:when test=\"$value > 0." + value + "\">");
+	textArea.insertEnterAndIndent();
+//	textArea.setSelectedText("<xsl:number value=\"" + log + "\" />");
+	textArea.setSelectedText("<xsl:text>" + log + "</xsl:text>");
+	textArea.insertEnterAndIndent();
+	textArea.setSelectedText("</xsl:when>");
+	textArea.insertEnterAndIndent();
+}
+
+textArea.setSelectedText("</xsl:choose>");
+textArea.insertEnterAndIndent();
+
